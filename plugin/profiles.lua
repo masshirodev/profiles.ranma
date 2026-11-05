@@ -15,7 +15,7 @@
 -- edit shows at once. A file that does not load is listed with its error
 -- instead of taking the plugin down.
 --
--- leader shift+p (or `:profiles` in the palette) picks the profile to use, or
+-- leader y p (or `:profiles` in the palette) picks the profile to use, or
 -- none. Every profile is listed, whoever declared it: these files, init.lua,
 -- other plugins (mobile.ranma's `mobile`). Each row says where it came from,
 -- marks the one in use (●), and says when switching to it reloads ranma
@@ -156,7 +156,7 @@ do
   if said ~= "" then
     ranma.defer(300, function()
       if RELOADED and said == before then return end
-      ranma.toast("profiles: " .. said .. " did not load (leader shift+p lists why)", { urgent = true })
+      ranma.toast("profiles: " .. said .. " did not load (leader y p lists why)", { urgent = true })
     end)
   end
 end
@@ -252,7 +252,7 @@ local function current_look()
   return def
 end
 
-local HEADER = "-- %s: a ranma profile, for `profile %s` or the profiles picker (leader shift+p).\n"
+local HEADER = "-- %s: a ranma profile, for `profile %s` or the profiles picker (leader y p).\n"
   .. "-- What it can carry: https://github.com/masshirodev/ranma/blob/main/doc/CONFIG.md "
   .. "(\"Profiles\").\n"
 
@@ -417,7 +417,7 @@ end, {
   complete = function() return { "save", "new", "edit", "manage" } end,
 })
 
-ranma.bind("shift+p", function() pick() end, { desc = "profiles", exit = true })
+ranma.bind("y p", function() pick() end, { desc = "profiles", exit = true })
 
 ranma.module("profile", {
   render = function()

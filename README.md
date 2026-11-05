@@ -38,7 +38,7 @@ reloads ranma (it watches every .lua under its config directory), so an
 edit shows at once. A file that does not load is listed with its error
 instead of taking the plugin down.
 
-leader shift+p (or `:profiles` in the palette) picks the profile to use, or
+leader y p (or `:profiles` in the palette) picks the profile to use, or
 none. Every profile is listed, whoever declared it: these files, init.lua,
 other plugins (mobile.ranma's `mobile`). Each row says where it came from,
 marks the one in use (●), and says when switching to it reloads ranma
@@ -89,14 +89,14 @@ The file's name is the profile's name: letters, digits, `_`, `-` and `.`, and no
 
 | | |
 | --- | --- |
-| `leader shift+p` | The picker: the profile to use, or none; then save, new, manage. WM mode ends with it. |
+| `leader y p` | The picker: the profile to use, or none; then save, new, manage. WM mode ends with it. |
 | `:profiles` | The same, from the palette. |
 | `:profiles save NAME` | Save the look on screen as `NAME`. |
 | `:profiles new NAME` | Write an empty profile `NAME` and open it in the editor. |
 | `:profiles edit NAME` | Open this folder's `NAME` in the editor. |
 | `:profiles manage` | Edit, rename or delete a file, or read another profile's source. |
 
-`ranma.unbind("shift+p")` in `init.lua` drops the key; `:profiles` stays in the palette.
+`ranma.unbind("y p")` in `init.lua` drops the key; `:profiles` stays in the palette.
 
 ## Options
 
