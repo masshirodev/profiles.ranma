@@ -94,7 +94,9 @@ end
 local OWN, BROKEN = {}, {}
 if DIR then
   local found = {}
-  local ls = io.popen("find " .. shq(DIR) .. " -maxdepth 1 -type f -name '*.lua' 2>/dev/null")
+  -- -L: a dotfiles repo links the folder (or a file in it) in, and find
+  -- does not follow a link it starts from without it.
+  local ls = io.popen("find -L " .. shq(DIR) .. " -maxdepth 1 -type f -name '*.lua' 2>/dev/null")
   if ls then
     for p in ls:lines() do found[#found + 1] = p end
     ls:close()
