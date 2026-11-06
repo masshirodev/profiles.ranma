@@ -1,7 +1,7 @@
 -- profiles: pick, save and edit ranma profiles.
 --
--- Needs ranma 0.4.0 or newer. The release after 0.4.0 (main until then)
--- adds what makes it whole: ranma.profiles(), so the picker shows every
+-- Needs ranma 0.4.0 or newer. ranma 0.5.0 adds what makes it whole:
+-- ranma.profiles(), so the picker shows every
 -- profile and where it came from, not only this folder's; theme.base and
 -- setup in a profile; and a bad profile theme failing only its own file.
 --

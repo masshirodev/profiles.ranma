@@ -16,15 +16,15 @@ Or by hand, as ranma loads any package under `pack/*/start/`:
 git clone https://github.com/masshirodev/profiles.ranma ~/.config/ranma/pack/plugins/start/profiles.ranma
 ```
 
-Needs: ranma 0.4.0 or newer. On 0.4.0 the picker lists only this plugin's own files. The release after 0.4.0 (ranma's `main` until it is out) brings `ranma.profiles()`, `theme.base`, `setup`, and a bad profile theme failing only its own file. With those, the picker lists every profile with where it came from. The plugin asks for each with `ranma.has` and uses what is there.
+Needs: ranma 0.4.0 or newer. On 0.4.0 the picker lists only this plugin's own files. ranma 0.5.0 brings `ranma.profiles()`, `theme.base`, `setup`, and a bad profile theme failing only its own file. With those, the picker lists every profile with where it came from. The plugin asks for each with `ranma.has` and uses what is there.
 
 ## What it does
 
 ```text
 profiles: pick, save and edit ranma profiles.
 
-Needs ranma 0.4.0 or newer. The release after 0.4.0 (main until then)
-adds what makes it whole: ranma.profiles(), so the picker shows every
+Needs ranma 0.4.0 or newer. ranma 0.5.0 adds what makes it whole:
+ranma.profiles(), so the picker shows every
 profile and where it came from, not only this folder's; theme.base and
 setup in a profile; and a bad profile theme failing only its own file.
 
